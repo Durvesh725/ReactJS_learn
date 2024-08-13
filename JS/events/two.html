@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello JS Lovers</h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+    <!-- Browser API function: setTimeOut, setInterval -->
+     <!-- handler is a callback function that has no name -->
+    <script>
+
+        setTimeout(function(){
+            console.log("Durvesh")
+        }, 2000)
+
+        // setInterval: a particular task is performed again and again after a particular interval
+        const setText = function(){
+            document.querySelector('h1').innerHTML = "Best JS series"
+        }
+
+        // 1. take ref of setTimeOut
+        const changeMe = setTimeout(setText, 3000)
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            // 2. tell clearIntervcal which setTimeOut youre referring to
+            clearInterval(changeMe);
+            console.log("STOPPED")
+        })
+    </script>
+</body>
+</html>
