@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>XML HTTP request</h1>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState -->
+    <script>
+
+        const requestURL = 'https://api.github.com/users/Durvesh725';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestURL)
+        // console.log(xhr.readyState)
+
+        // continuously monitor ready state - accepts a function
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState === 4){
+                // responseText returns an string i.e response of a url is string in most of the cases 
+                const data = JSON.parse(this.responseText)
+                console.log(typeof(data))
+                console.log(data.followers)
+            }
+        }
+
+        // console.log("Here")
+        xhr.send()
+
+    </script>
+</body>
+</html>
