@@ -24,9 +24,9 @@
 hello(goodbye)
 
 // hello function when you're done, call the next goodbye function
-function hello(callback){
+function hello(cb){
     console.log("hello")
-    callback()
+    cb()
 }
 
 function goodbye(){
