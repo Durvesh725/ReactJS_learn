@@ -8,6 +8,8 @@ function abc(){
 }
 
 abc();
+// here, var can be accessed anywhere in its parent function
+// let: let can be accessed only inside {} block, as it is block scope
 
 
 //

@@ -9,5 +9,7 @@ firstClass(function(){
     console.log("Hey!");
 })
 
-// function can be treated as a value
+//here, the function is passed as a argument to 'FirstClass' function
+
+// def: function can be treated as a value
 // also, function expression

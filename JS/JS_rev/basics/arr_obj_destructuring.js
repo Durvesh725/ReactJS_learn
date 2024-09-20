@@ -13,4 +13,5 @@ var obj = {
 }
 
 let {name, age} = obj
+//here, the variable names inside {} must be same as the object property names
 console.log(age)
