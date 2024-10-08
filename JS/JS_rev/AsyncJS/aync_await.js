@@ -2,6 +2,7 @@
 
 // 1. with then and variables---------------------------------------
 // function getData(){
+        //fetch return promise response, therefore its response needs to be handled by .then
 //     let res = fetch(`https://randomuser.me/api/`)
 //     let t1 = res.then((rawData) => {
 //         return rawData.json();
@@ -27,7 +28,8 @@
 // getData()
 
 
-// 3. with async await----------------------------------------------
+// 3. with async await----------------------------------------------to avoid chain of .then statement
+// make code more readable
 async function getData(){
     let raw = await fetch(`https://randomuser.me/api/`);
     let data = await raw.json();

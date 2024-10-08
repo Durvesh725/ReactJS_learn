@@ -8,7 +8,7 @@ setTimeout(function(){
 }, 0)
 console.log("d")
 
-// here, a, b and c are moved to the main stack and c is moved to the side stack
+// here, a, b and d are moved to the main stack and c is moved to the side stack
 // when a, b and c completed there execution, then the main stack checks whether the side stack contains 
 // anything, if so it bring it in the main stack
 
